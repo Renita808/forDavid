@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>One Day</title>
+    <style>
+
+    html {
+  background: url(https://fishingbooker.com/blog/media/Hawaii-beach.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+    #topButton {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    }
+    .button {
+      position: relative;
+      top: 400px;
+      left: 300px;
+      font-size: 50px;
+      color: red;
+      font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <button id="topButton">CLICK HERE</button>
+    <!-- <p id= "oneDay">One Day</p> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"> </script>
+    <script>
+         $(function () {
+       var words = ["I LOVE YOU!!", "One Day...", "We'll Be Here...", "Together!"]
+       counter = 0
+
+       console.log(words[counter]);
+
+       $("#topButton").click(function() {
+         counter = (counter + 1) % words.length;
+
+         $("<h2>").addClass("button")
+         .html(words[counter]).appendTo("body").css("left", 500 + "px")
+
+       })
+     })
+        </script>
+
+
+</body>
+</html>
